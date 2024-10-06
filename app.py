@@ -347,7 +347,9 @@ def predict():
 
     # Step 6: Render the result page with the predicted output
     return render_template('result.html', result=result)
-
+@app.route('/satellite')
+def satellite():
+    return render_template('satelliteimage.html')
 if __name__ == '__main__':
     load_model()
     app.run(debug=True)
