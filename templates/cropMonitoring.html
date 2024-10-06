@@ -7,7 +7,7 @@
     <style>
         /* Root variables for NASA-inspired colors */
         :root {
-            --primary-color: #0b3d91; /* NASA Blue */
+            --primary-color: #001F4D; /* NASA Blue */
             --accent-color: #ff0000;  /* NASA Red */
             --bg-color: #0c1a2b;      /* Dark Background */
             --text-color: #ffffff;
@@ -26,30 +26,30 @@
         }
         header {
             background-color: var(--primary-color);
-            padding: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
+            padding: 20px 0;
+            text-align: center;
         }
-        header h1 {
-            margin-left: 20px;
-            font-size: 2rem;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFFFFF;
+            letter-spacing: 2px;
         }
         nav ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
-
-		nav ul li {
-			display: inline;
-			margin-right: 20px;
-		}
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
         nav ul li a {
             color: var(--text-color);
             text-decoration: none;
             font-size: 1.1rem;
+            font-weight: bold;
             transition: color 0.3s;
         }
         nav ul li a:hover {
@@ -81,6 +81,7 @@
         .hero-content h2 {
             font-size: 3rem;
             margin-bottom: 20px;
+            color: #FFFFFF;
         }
         .cta-button {
             background-color: var(--accent-color);
@@ -102,6 +103,7 @@
             text-align: center;
             margin-bottom: 40px;
             font-size: 2.5rem;
+            color: #FFFFFF;
         }
         .feature {
             display: flex;
@@ -121,6 +123,7 @@
             font-size: 1.8rem;
             margin-bottom: 15px;
             text-align: center;
+            color: #FFFFFF;
         }
         .feature div p {
             text-align: center;
@@ -142,6 +145,7 @@
             text-align: center;
             margin-bottom: 30px;
             font-size: 2.5rem;
+            color: #FFFFFF;
         }
         .data-dashboard .chart {
             width: 80%;
@@ -153,12 +157,12 @@
             padding: 20px;
             text-align: center;
         }
-        h4 a{
-            color:white;
+        h4 a {
+            color: white;
             text-decoration: none;
         }
-        h4 a:hover{
-            color:red;
+        h4 a:hover {
+            color: red;
         }
         /* Responsive Design */
         @media (max-width: 1200px) {
@@ -167,16 +171,6 @@
             }
         }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5rem;
-            }
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul li {
-                margin: 10px 3px;
-            }
             .hero-content h2 {
                 font-size: 2rem;
             }
@@ -206,16 +200,15 @@
 
     <!-- Header with NASA style logo -->
     <header>
-        <h1>Crop Monitoring</h1>
+        <div class="logo">Crop Monitoring</div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#">Monitoring</a></li>
                 <li><a href="#">Data</a></li>
                 <li><a href="#">Insights</a></li>
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a href="#">Sign In</a></li>
             </ul>
         </nav>
     </header>
@@ -272,10 +265,6 @@
         <h3>Crop Health Dashboard</h3>
         <div class="chart">
             <img src="https://cdn.dribbble.com/userupload/9825964/file/original-e30a769281d06501f17c4d85788e8708.png?resize=1600x1200" width="100%" height="500px" alt="Dashboard Image">
-
-
-
-
         </div>
     </section>
 

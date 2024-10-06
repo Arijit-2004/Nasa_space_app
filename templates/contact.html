@@ -5,77 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NASA Agriculture - Contact</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-	<style>
-        body, header, .container, .logo, nav ul, nav ul li a, section, footer {
-            margin: 0; padding: 0; box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
+    <style>
         body {
-            background: linear-gradient(135deg, #003366, #0066cc);
+            font-family: 'Open Sans', sans-serif;
+            background-color: #000033; /* NASA's deep space-like dark blue */
             color: white;
+            margin: 0;
+            padding: 0;
         }
-        header {
-            background-color: rgba(0, 51, 102, 0.9);
-            color: white;
-            padding: 15px 0;
-            position: relative;
-            z-index: 1000;
-        }
+
         .container {
-			width: 90%;
-			margin: 0 auto;
-			text-align: center;
-		}
+            width: 90%;
+            margin: 0 auto;
+        }
 
-		/* Header */
-		header {
-			background-color: #001F4D;
-			padding: 20px 0;
-		}
+        /* Header */
+        header {
+            background-color: #001F4D;
+            padding: 20px 0;
+        }
 
-		.logo {
-			font-size: 24px;
-			font-weight: bold;
-			color: #FFFFFF;
-			letter-spacing: 2px;
-		}
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-align: center;
+            letter-spacing: 2px;
+        }
 
-		nav ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-		}
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
 
-		nav ul li {
-			display: inline;
-			margin-right: 20px;
-		}
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-		nav ul li a {
-			text-decoration: none;
-			color: #FFFFFF;
-			font-size: 16px;
-			font-weight: bold;
-		}
+        nav ul li a {
+            text-decoration: none;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+        }
 
-		nav ul li a:hover {
-			color: #00AAFF; /* Lighter blue hover effect */
-		}
+        nav ul li a:hover {
+            color: #00AAFF; /* Lighter blue hover effect */
+        }
 
+        /* Section */
         section {
             padding: 70px 0;
             text-align: center;
         }
+
         h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-size: 32px;
+            font-weight: bold;
+            color: #FFFFFF;
         }
+
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         input, textarea {
             width: 100%;
             max-width: 500px;
@@ -83,33 +81,37 @@
             margin: 10px 0;
             border-radius: 5px;
             border: 1px solid #fff;
-            background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-            color: #fff;
+            background-color: rgba(255, 255, 255, 0.76); /* Semi-transparent background */
+            color: #000; /* Change text color to dark for readability */
             transition: border 0.3s;
         }
+
         input:focus, textarea:focus {
-            border: 1px solid #ffcc00; /* Bright yellow on focus */
+            border: 1px solid #00AAFF; /* Bright blue on focus */
             outline: none;
         }
+
         .btn-primary {
-            background-color: #ffcc00; /* Bright yellow */
+            background-color: #00AAFF;
             padding: 12px 25px;
-            color: #003366; /* Dark blue text */
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             transition: background 0.3s, transform 0.2s;
         }
+
         .btn-primary:hover {
-            background-color: #e6b800; /* Darker yellow on hover */
+            background-color: #0077CC; /* Darker blue on hover */
             transform: scale(1.05);
         }
+
+        /* Footer */
         footer {
-            background-color: rgba(0, 51, 102, 0.9);
-            color: white;
-            text-align: center;
+            background-color: #001F4D;
             padding: 20px 0;
-            position: relative;
+            text-align: center;
+            color: #CCCCCC;
         }
     </style>
 </head>
@@ -146,19 +148,13 @@
     </footer>
 
     <script>
-        // Sticky Header on Scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            header.classList.toggle('sticky', window.scrollY > 0);
-        });
-
         // Form validation
         const contactForm = document.querySelector('form');
         contactForm.addEventListener('submit', function(e) {
             const name = document.querySelector('input[name="name"]').value;
             const email = document.querySelector('input[name="email"]').value;
             const message = document.querySelector('textarea[name="message"]').value;
-            
+
             if (!name || !email || !message) {
                 alert('Please fill in all fields');
                 e.preventDefault(); // Prevent form submission
